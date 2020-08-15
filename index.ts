@@ -1,5 +1,4 @@
-import fs, {write} from "fs";
-import { start } from "repl";
+import fs from "fs";
 
 let startTime = new Date().getTime();
 console.time();
@@ -14,8 +13,8 @@ for (let row = 1; row < rows.length - 1; row++) {
   finalConvertedNumbers.push(converting(parseInt(numbersToBeConverted[0]), parseInt(numbersToBeConverted[1]), parseInt(numbersToBeConverted[2])));
   }
   //writing
-  let writeStream = fs.createWriteStream("ConvertedNumbers.csv");
-  writeStream.write(finalConvertedNumbers.toString());
+  let writeInFile = fs.createWriteStream("ConvertedNumbers.csv");
+  writeInFile.write(finalConvertedNumbers.toString());
 });
   //parsing
  function converting(generalNumber: number, fromBase: number, toBase: number) {
