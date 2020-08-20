@@ -1,1 +1,1 @@
-"# Javascript-tema" 
+"Javascript/Typescript homeworks" 
