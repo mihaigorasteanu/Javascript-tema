@@ -9,28 +9,28 @@ app.get("/sum/:firstNumber/:secondNumber", (request, response) => {
 	let firstNumber=parseInt(`${request.params.firstNumber}`);
 	let secondNumber=parseInt(`${request.params.secondNumber}`);
 	let result=firstNumber+secondNumber;
-	response.send(`The result of sum is ${result}`);
+	response.json(`The result of sum is ${result}`);
 });
 
 app.get("/substraction/:firstNumber/:secondNumber", (request, response) => {
 	let firstNumber=parseInt(request.params.firstNumber);
 	let secondNumber=parseInt(request.params.secondNumber);
 	let result=firstNumber-secondNumber;
-	response.send("The result of substraction is " +result);
+	response.json("The result of substraction is " +result);
 });
 
 app.get("/division/:firstNumber/:secondNumber", (request, response) => {
 	let firstNumber=parseInt(request.params.firstNumber);
 	let secondNumber=parseInt(request.params.secondNumber);
 	let result=firstNumber/secondNumber;
-	response.send("The result of division is " +result);
+	response.json("The result of division is " +result);
 });
 
 app.get("/multiplication/:firstNumber/:secondNumber", (request, response) => {
 	let firstNumber=parseInt(request.params.firstNumber);
 	let secondNumber=parseInt(request.params.secondNumber);
 	let result=firstNumber*secondNumber;
-	response.send("The result of multiplication is " +result);
+	response.json("The result of multiplication is " +result);
 });
 
 app.post("/pow", (request, response) => {
